@@ -1,0 +1,24 @@
+﻿@model MVCApplication.Models.UserModel
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@using (Html.BeginForm("Post_1", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(m => m.UserName)
+
+    <button type="submit" class="btn btn-success">Save</button>
+}
+
+@{
+    using (Html.BeginForm("Post_2", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(m => m.UserName)
+
+        <button type="submit" class="btn btn-success">Save</button>
+    }
+}
